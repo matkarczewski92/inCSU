@@ -1,0 +1,18 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^thkxadmin/ - [L]
+
+RewriteRule ^logout controller/logout.php
+RewriteRule ^login controller/login.php
+#RewriteRule ^thkxadmin thkxadmin/
+RewriteRule ^([^/.]+)$ index.php?page=$1
+RewriteRule ^([^/.]+)/([^/.]+)$ index.php?page=$1&typ=$2
+RewriteRule ^([^/.]+)/([^/.]+)/([^/.]+)$ index.php?page=$1&typ=$2&ptyp=$3
+RewriteRule ^([^/.]+)/([^/.]+)/([^/.]+)/([^/.]+)$ index.php?page=$1&typ=$2&ptyp=$3&ods=$4
+RewriteRule ^([^/.]+)/([^/.]+)/([^/.]+)/([^/.]+)/([^/.]+)$ index.php?page=$1&typ=$2&ptyp=$3&ods=$4&ops=$5
+
+
+
+
+
